@@ -4,9 +4,12 @@ import AcUnitRoundedIcon from '@material-ui/icons/AcUnitRounded'
 import { makeStyles } from "@material-ui/styles"
 
 const useStyles = makeStyles(() => ({
-    typographyStyles: {
-        flex: 1
+    typo: {
+        flex: 5
     },
+    icon: {
+        flex: 1
+    }
 }))
 
 const Header = () => {
@@ -15,10 +18,10 @@ const Header = () => {
     return (
         <AppBar position="static">
             <Toolbar>
-                <Typography className={classes.typographyStyles}>
+                <Typography className={classes.typo}>
                     This is our header
                 </Typography>
-                <AcUnitRoundedIcon />
+                <AcUnitRoundedIcon className={classes.icon} />
             </Toolbar>
         </AppBar>
     )
